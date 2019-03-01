@@ -5,26 +5,12 @@
 
 # size: ~1.6 GB
 
-module load gcc/5.3.1
-module load openmpi
-module load petsc
-module load blas
-module load lapack
+BASE=/opt/sw/
 
-BASE=$PWD
-
-mkdir freefem
+mkdir -p freefem
 BUILD_DIR=$BASE/freefem
 
-# Install OpenBLAS
-git clone https://github.com/xianyi/OpenBLAS.git
-cd OpenBLAS
-make
-make PREFIX=$BUILD_DIR install
-
 cd $BASE
-
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$BUILD_DIR/lib
 
 # Install FreeFEM++
 git clone https://github.com/FreeFem/FreeFem-sources.git
@@ -46,4 +32,4 @@ make install
 
 # Delete source files
 cd $BASE
-rm -rf OpenBLAS FreeFem-sources
+rm -rf FreeFem-sources
