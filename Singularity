@@ -18,7 +18,7 @@ From: shub://willgpaik/centos7_aci:latest
       patch \
       openmpi-devel \
       fftw-devel \
-      openblas-devel
+      openblas-devel \
       lapack-devel
     yum -y update
 
