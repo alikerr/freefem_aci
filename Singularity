@@ -5,7 +5,7 @@ From: shub://willgpaik/centos7_aci:latest
 %files
 
 %environment 
-    PATH="$PATH:/opt/sw/freefem/bin"
+    PATH="$PATH:/usr/lib64/openmpi/bin/:/opt/sw/freefem/bin/"
     export PATH
 
 %runscript
