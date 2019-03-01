@@ -5,6 +5,8 @@
 
 # size: ~1.6 GB
 
+source /opt/rh/devtoolset-8/enable
+
 BASE=/opt/sw/
 
 mkdir -p freefem
