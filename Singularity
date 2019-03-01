@@ -27,7 +27,9 @@ From: shub://willgpaik/centos7_aci:latest
       MUMPS-devel \
       NLopt-devel \
       coin-or-Ipopt-devel \
-      gnuplot
+      gnuplot \
+      superLU-devel \
+      hypre
     yum -y update
 
     source /opt/rh/devtoolset-8/enable
