@@ -19,7 +19,15 @@ From: shub://willgpaik/centos7_aci:latest
       openmpi-devel \
       fftw-devel \
       openblas-devel \
-      lapack-devel
+      lapack-devel \
+      freeglut-devel \
+      scotch-devel \
+      arpack-devel \
+      suitesparse-devel \
+      MUMPS-devel \
+      NLopt-devel \
+      coin-or-Ipopt-devel \
+      gnuplot
     yum -y update
 
     source /opt/rh/devtoolset-8/enable
