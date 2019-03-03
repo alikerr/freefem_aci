@@ -29,7 +29,8 @@ From: shub://willgpaik/centos7_aci:latest
       coin-or-Ipopt-devel \
       gnuplot \
       superLU-devel \
-      hypre
+      hypre \
+      perl-Digest-MD5
     yum -y update
 
     source /opt/rh/devtoolset-8/enable
