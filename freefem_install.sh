@@ -9,7 +9,7 @@ source /opt/rh/devtoolset-8/enable
 
 BASE=/opt/sw/
 
-mkdir -p freefem
+mkdir -p $BASE/freefem
 BUILD_DIR=$BASE/freefem
 
 cd $BASE
