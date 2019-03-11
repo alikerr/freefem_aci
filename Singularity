@@ -7,6 +7,9 @@ From: shub://willgpaik/centos7_aci:latest
 %environment 
     PATH="$PATH:/usr/lib64/openmpi/bin/:/opt/sw/freefem/bin/"
     export PATH
+    LD_PRELOAD="/opt/eod/lib/libopentextdlfaker.so.3:/opt/eod/lib/libopentextglfaker.so.3 \
+        :/opt/eod/lib64/libopentextdlfaker.so.3:/opt/eod/lib64/libopentextglfaker.so.3"
+    export LD_PRELOAD
 
 %runscript
 
@@ -43,3 +46,8 @@ From: shub://willgpaik/centos7_aci:latest
     ./freefem_install.sh
     
     rm freefem_install.sh
+    
+    # Download requires libraries for EoD:
+    cd /opt/
+    svn export https://github.com/willgpaik/MorphoGraphX_aci.git/trunk/eod_graphics_libraries
+    mv eod_graphics_libraries eod
